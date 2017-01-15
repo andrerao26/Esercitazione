@@ -17,15 +17,15 @@ namespace Esercitazione
         {
             get
             {
-                return _anni;
+                return _eta;
             }
             set
             {
                 if (value <= 0) value = 1;
-                _anni = value;
+                _eta = value;
             }
 
-        }
+       }
 
         public Persona(string nome, string cognome, int eta)
         {
@@ -37,9 +37,21 @@ namespace Esercitazione
 
         public string describe()
         {
-            string output ="Nome: " + nome + "\r\n";
-            output +="Cognome: " + cognome + "\r\n";
-            output +="Età: " + eta + "\r\n";
+            string output = "Nome: " + nome + "\r\n";
+            output += "Cognome: " + cognome + "\r\n";
+            output += "Età: " + eta + "\r\n";
             return output;
         }
+
+        public string CodiceFiscale
+        {
+            get
+            {
+                return nome + cognome + eta;
+            }
+
+        }
+
+
+    }
 }
